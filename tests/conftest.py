@@ -23,7 +23,7 @@ def create_melt_tagger(nlp, name):
 
 @pytest.fixture(scope="session")
 def nlp():
-    nlp = spacy.load("fr_core_news_sm")
+    nlp = spacy.load("fr_core_news_sm")  
     nlp.add_pipe("french_lemmatizer", after="parser")
     return nlp
 
